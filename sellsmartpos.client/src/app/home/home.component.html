@@ -1,0 +1,148 @@
+<section class="section">
+
+  <div class="container">
+    <div class="row">
+      <!-- Products Section -->
+      <div class="products">
+        <div *ngFor="let item of fillterProducts" (click)="AddItem(item)"  class="product inner-shadow" data-target="fish">
+          <span>{{item.name}}</span>
+        </div>
+
+
+      </div>
+      <!-- Right Container -->
+      <div class="right">
+        <!-- Categories Section -->
+        <div class="categories">
+          <div *ngFor="let item of Cats" class="category" (click)="FilterProductsbyCategory(item.id)" data-filter="fish">
+            {{item.name}}
+          </div>
+
+
+          <div  class="category" (click)="fillterProducts=products" data-filter="fish">
+           كل المنتجات
+          </div>
+        </div>
+        <!-- Buttons To Select Value -->
+        <div class="buttons">
+          <div class="collapse">
+            <i class="fas fa-plus"></i>
+          </div>
+          <!--<div class="order-button" data-type="Take Away">
+            <div class="overlay"></div>
+            <span> Take Away</span>
+          </div>-->
+          <div (click)="toggleCustomer()" class="order-button delivery" data-type="Delivery">
+            <div class="overlay"></div>
+            <span>Customer</span>
+          </div>
+          <!--<div class="order-button tables" data-type="Tabels">
+            <div class="overlay"></div>
+            <span>Tabels</span>
+          </div>-->
+        </div>
+        <div class="status outer-shadow">
+          <div class="text">
+            <div> العدد  : <span class="type">{{salesDetail.length}}</span></div>
+            <div> Customer Name: <span class="number" style="color:blue;">{{model.customerName}}</span></div>
+          </div>
+          <div class="clear-container">
+            <div class="clear" (click)="ClearDetails()"><i class="fas fa-trash"></i> Clear</div>
+          </div>
+
+          <div class="clear-container">
+            <div class="save" (click)="Save()"><i class="fas fa-download"></i> حفظ</div>
+          </div>
+        </div>
+        <!-- Table To Display Values -->
+        <div class="result">
+          <div class="rows">
+            <div class="row title">
+              <div>Items</div>
+              <div>Quantity</div>
+              <div>Price</div>
+              <div>Total</div>
+            </div>
+            <!-- Loop Row Value -->
+            <div class="row " *ngFor="let item of salesDetail; index as i">
+              <div class="item">{{item.product.name}}</div>
+              <div class="input numbet">
+                <div class="row-up">
+                  <i class="fas fa-arrow-up" (click)="IncreaseQty(item)"></i>
+                </div>
+                <div class="row-down">
+                  <i class="fas fa-arrow-down" (click)="DecreaseQty(item)"></i>
+                </div>
+                <input type="number" placeholder="{{item.qty}}">
+              </div>
+              <div class="price">{{item.product.price}}</div>
+              <div class="total">{{item.total}}</div>
+              <div class="delete" (click)="RemoveProduct(i)"><i class="fas fa-trash"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- Total Value -->
+        <div class="output">
+          <div class="o-total">Total : <span>{{model.total}}</span></div>
+          <div class="discount"><span>Discount : </span><span ><input type="number"  [(ngModel)]="model.discount"   (change)="CalculateTotals()"></span></div>
+          <div class="Cash">Cash : <span>{{model.cash}}</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Draggable Icon -->
+  <div class="draggable">
+
+    <div id="item" class="active">
+      <i class="fas fa-camera"></i>
+      <i class="fas fa-music"></i>
+      <i class="fas fa-video"></i>
+      <i class="fas fa-download"></i>
+      <label for="click">
+        <span class="fas fa-plus"></span>
+      </label>
+    </div>
+  </div>
+</section>
+<!-- Pop Up Multi-->
+<div class="multi-pop-up">
+  <div class="close hover-in-shadow" (click)="toggleCustomer()"><i class="fas fa-times"></i></div>
+  <div class="content">
+    <div class="category" *ngFor="let item of customers">{{item.name}}</div>
+    <div class="content" *ngFor="let item of customers" (click)="changeCustomer(item)" style="color:white;">{{item.name}}</div>
+     
+  </div>
+</div>
+<!-- Pop Up Table-->
+<!--<div class="tabels-popup">
+  <div class="close hover-in-shadow"><i class="fas fa-times"></i></div>
+  <div class="content">
+    <div class="t-number">1</div>
+    <div class="t-number">2</div>
+    <div class="t-number">3</div>
+    <div class="t-number">4</div>
+    <div class="t-number">5</div>
+    <div class="t-number">6</div>
+    <div class="t-number">7</div>
+    <div class="t-number">8</div>
+    <div class="t-number">9</div>
+    <div class="t-number">10</div>
+    <div class="t-number">11</div>
+    <div class="t-number">12</div>
+    <div class="t-number">13</div>
+    <div class="t-number">14</div>
+    <div class="t-number">15</div>
+    <div class="t-number">16</div>
+    <div class="t-number">17</div>
+    <div class="t-number">18</div>
+    <div class="t-number">19</div>
+    <div class="t-number">20</div>
+    <div class="t-number">21</div>
+  </div>
+</div>-->
+<div  class="ordersNumber ">
+  <div>Invoice No  <span>21</span></div>
+  <div>Order No  <span>15</span></div>
+</div>
+<script src="./posScript.js"></script>

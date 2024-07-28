@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SellSmartPos.Server", "SellSmartPos.Server\SellSmartPos.Server.csproj", "{F1915C81-EC60-411B-A7B3-57BDF2570C7E}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "sellsmartpos.client", "sellsmartpos.client\sellsmartpos.client.esproj", "{BD4A075A-1530-40AD-960E-2AE335AC7530}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1915C81-EC60-411B-A7B3-57BDF2570C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1915C81-EC60-411B-A7B3-57BDF2570C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1915C81-EC60-411B-A7B3-57BDF2570C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1915C81-EC60-411B-A7B3-57BDF2570C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4A075A-1530-40AD-960E-2AE335AC7530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4A075A-1530-40AD-960E-2AE335AC7530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4A075A-1530-40AD-960E-2AE335AC7530}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BD4A075A-1530-40AD-960E-2AE335AC7530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4A075A-1530-40AD-960E-2AE335AC7530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4A075A-1530-40AD-960E-2AE335AC7530}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C85CEA7-6B9F-4439-A51A-603A5F881976}
+	EndGlobalSection
+EndGlobal
