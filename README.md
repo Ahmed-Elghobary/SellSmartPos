@@ -2,6 +2,8 @@
 
 ## 📝 Overview
 This project is a single-page application (SPA) built with Angular. It demonstrates a complete CRUD (Create, Read, Update, Delete) operation using an external API. The project showcases my understanding of Angular modules, components, directives, and business logic related to business, sales, purchases, discounts, and total calculations.
+## 🌐 Demo
+Check out the live demo of the project [here](http://your-demo-link.com)
 
 ## ✨ Features
 - 📁 **Modular Structure**: The project is organized into modules to ensure scalability and maintainability.
